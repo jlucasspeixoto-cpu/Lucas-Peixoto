@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  --color-primary: #111111;
+  --color-primary-container: #222222;
+  --color-surface: #F5F5F5;
+  --color-surface-container-low: #FFFFFF;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-on-surface: #111111;
+  --color-secondary: #666666;
+  --color-tertiary: #111111;
+  --color-tertiary-container: #EEEEEE;
+  --color-error: #111111;
+  --color-error-container: #F9F9F9;
+  --color-outline: #DDDDDD;
+  --color-outline-variant: #EEEEEE;
+  
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/90;
+  }
+  
+  .ambient-shadow {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cta-gradient {
+    @apply bg-primary;
+  }
+}
